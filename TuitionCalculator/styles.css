@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.results-container {
+    width: 500px;
+    margin: 80px auto;   /* centers horizontally */
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.index_div{
+    background-color: rgb(254, 227, 225);
+    width:40%;
+    margin:5rem auto;
+    padding: 1rem;
+    box-shadow: .1rem .1rem .1rem;
+}
+
+input{
+    margin-top:1rem;
+}
+
+.index_h1{
+    color:red;
+    text-shadow: gray 1px 1px 1px;
+}

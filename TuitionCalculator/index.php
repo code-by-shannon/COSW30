@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Tuition Calculator</title>
 </head>
 <body>
-    <h1>Long Beach City College Tuition Calculator</h1>
+    <div class = 'index_div'>
+    <h1 class = 'index_h1'>Long Beach City College Tuition Calculator</h1>
     <h2>Fill out this form to calculate total cost of tuition:</h2>
 
-    <form action="index.php" method="post">
+    <form action="process_tuition.php" method="post">
 
         <!--  Dropdown: Number of Units -->
         <label for="units">Please choose number of units
@@ -39,13 +41,20 @@
         </select>
         </label>
         <br>
+        <p id="unit-preview"></p>
+        <br>
+        
         <!-- California Resident or No -->
         <label for="resident">California Resident
-        <input type="radio" name="resident" value="resident">
+        <input type="radio" name="resident" value="resident" id='cal_res'>
         </label>
         <label for="non-resident">Non California Resident
         <input type="radio" name="resident" value="non-resident">
         </label>
+        <br>
+        <p id="resident_preview"></p>
+        <br>
+        
         <!--  College Service Card -->
         <h3>College Service Card</h3>
         <label for="service-card">Yes
@@ -54,6 +63,7 @@
         <label for="service-card">No
         <input type="radio" name="service-card" value="no">
         </label>
+        
         <!--  Parking Permit Fee -->
         <h3>Parking Permit Fee</h3>
         <label for="parking-permit">Yes
@@ -63,8 +73,7 @@
         <input type="radio" name="parking-permit" value="no">
         </label>
         
-
-
+        <!-- Submit Button -->
         <br>
         <input type="submit" value = "SUBMIT">
     </form>
@@ -72,13 +81,12 @@
 
 
 <?php
-
+$tuition = 0;
 $tuition_total = 19;
 $tuition_resident = 46;
 $tuition_non_resident = 331;
 $service_card_fee = 20;
 $parking_permit_fee = 30;
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -92,9 +100,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // resident status check and total update
     if ($resident_status == 'resident'){
         $tuition_total += $instate;
+        $tuition += $instate;
+        
         echo "In state tuition rate x total units selected for semester = <b>$" . ($instate) . "</b><br>";
     } else if ($resident_status == 'non-resident'){
         $tuition_total += $outstate;
+        $tuition += $outstate;
         echo "Out of state tuition rate x total units selected for semester = <b>$" . ($outstate) . "</b><br>";
     }
 
@@ -112,13 +123,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     echo  "Student Health Fee Added: <b>$19</b><br><br>";
     echo   "Total fees plus tuition: <b>$" . $tuition_total . "</b>";
+
+
+    // scholarship total and adjusted final payment
+    $scholarship_fund = rand(0, $tuition);
+    echo "You have been awarded a scholarship of <b>$" . $scholarship_fund . '</b><br>';
+    echo "Your adjusted tuition fees plus tuition is now <b>$" . $tuition . "</b> - <b>" . $scholarship_fund . "</b> which is equal to <b>$" . ($tuition - $scholarship_fund) . '</b><br>';
+    $final_fees = $tuition_total - $scholarship_fund;
+    echo "Your adjusted total tuition and services fee is <b>$" . $final_fees . '</b>'; 
    
 }
 
- // array check
- echo "<pre>";
- print_r($_POST);
- echo "</pre>";
+
+
+// *** array check ***
+//  echo "<pre>";
+//  print_r($_POST);
+//  echo "</pre>";
+
 
 
 
@@ -129,8 +151,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 ?>
-
-
+</div>
+<script src='main.js'></script>
 </body>
 </html>
 
