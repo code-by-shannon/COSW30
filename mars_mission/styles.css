@@ -1,0 +1,57 @@
+*{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+}
+
+.index{
+    background-image: url(mars_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(149, 7, 7);
+    color:floralwhite;
+    /* form align */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;       
+    min-height: 100vh;    
+}  
+
+.trip_confirm_page{
+    background-image: url(orbit_mars.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(149, 7, 7);
+    color:floralwhite;
+    /* form align */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;       
+    min-height: 100vh;  
+}
+
+h1{
+    color:floralwhite;
+    text-shadow: 1px 1px 1px 1px black;
+    font-size: 2rem;
+}
+
+form{
+    border: solid 2px floralwhite;
+    padding: 1rem;
+    background-color: black;
+    opacity:.7;
+}
+
+#confirmation{
+    background-color: black;
+    opacity:.8;
+    padding:1rem;
+    border-radius:4px;
+    box-shadow: 2px 2px 1px floralwhite;
+    text-shadow: 1px 1px 1px brown;
+}
+
