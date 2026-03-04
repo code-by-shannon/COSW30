@@ -50,12 +50,14 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST"){
 
 
 
+<div class = 'trivia'>
+    <button id = 'button'>Mars Fact</button>
+    <p id='fun_fact'></p>
+</div>
 
 
 
-
-
-
+<script src='main.js'></script>
 </body>
 </html>
 

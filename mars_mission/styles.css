@@ -55,3 +55,14 @@ form{
     text-shadow: 1px 1px 1px brown;
 }
 
+#fun_fact{
+    display:none;
+    background-color: black;
+    opacity: .8;
+    padding:1.5rem;
+}
+
+.trivia{
+    margin-top:2rem;
+}
+
