@@ -1,0 +1,84 @@
+*{
+    color: floralwhite;
+}
+
+body{
+    background-image: url(west_scifi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    background-color: rgb(9, 0, 0);
+
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    min-height: 100vh;
+}
+
+.main-div{
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    border:solid floralwhite 2px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    opacity:.5;
+    padding:.5rem;
+    border-radius:4px;
+    box-shadow: #7fdfff 2px 2px 2px;
+}
+
+h1{
+    font-size: 2.5rem;
+
+    text-shadow:
+    0 0 4px rgba(255,140,0,0.6),
+    0 0 8px rgba(255,140,0,0.4),
+    0 0 12px rgba(255,140,0,0.25);
+}
+
+.output{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+
+    text-shadow:
+        0 0 4px rgba(255,140,0,0.6),
+        0 0 8px rgba(255,140,0,0.4),
+        0 0 12px rgba(255,140,0,0.25);
+}
+
+.controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+label{
+    font-size:1.5rem;
+}
+
+select{
+    padding:6px 10px;
+}
+
+select,
+button{
+    height: 40px;
+    padding: 0 12px;
+    font-size: 1rem;
+    color:black;
+}
+
+.glow-word{
+    color:#7fdfff;
+
+    text-shadow:
+        0 0 4px #7fdfff,
+        0 0 10px rgba(38, 201, 255, 0.7),
+        0 0 50px floralwhite;
+}
+
