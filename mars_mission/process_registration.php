@@ -18,12 +18,22 @@ $phone = $_POST['phone'];
 $age_range = $_POST['age_range'];
 $family_status = $_POST['family_status'];
 $reason = $_POST['reason'];
+$terms = $_POST['terms'];
 
 
 // Check all inputs for data.  If any field is empty, exit program
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST"){
-    die ("Oops!  It looks like you need to finish filling out the form!");
+if (
+    empty($first_name) ||
+    empty($last_name) ||
+    empty($email) ||
+    empty($phone) ||
+    empty($age_range) ||
+    empty($family_status) ||
+    empty($reason) ||
+    empty($terms)
+) {
+    die("<div class = 'error'>Oops! Please complete all required fields before submitting the form.</div>");
 }  else { 
     ?>
     

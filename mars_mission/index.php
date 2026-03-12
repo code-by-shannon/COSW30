@@ -46,7 +46,7 @@
     <label for="family_status">Family Status:</label><br>
     <select id="family_status" name="family_status" required>
         <option value="">-- Select Family Status --</option>
-        <option value="1 Occupant">Singe Occupant</option>
+        <option value="1 Occupant">Single Occupant</option>
         <option value="2 Occupants">Two Occupants</option>
         <option value="3 Occupants">Three Occupants</option>
         <option value="4 Occupants">4 Occupants</option>

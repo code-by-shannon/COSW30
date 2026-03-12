@@ -66,3 +66,10 @@ form{
     margin-top:2rem;
 }
 
+.error{
+    font-size: 2rem;
+    background-color: black;
+    opacity: .8;
+    padding:1rem;
+    border-radius: 4px;
+}
