@@ -1,0 +1,52 @@
+/* FORM CONTAINER */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* ALL FIELDS */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* TEXTAREA */
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* RADIO + CHECKBOX */
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+  }
+  
+  /* LABELS */
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* SUBMIT BUTTON */
+  input[type="submit"] {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background: #0056b3;
+  }
