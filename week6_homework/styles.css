@@ -50,3 +50,9 @@ form {
   input[type="submit"]:hover {
     background: #0056b3;
   }
+
+  .error{
+    color:red !important;
+  }
+
+  
