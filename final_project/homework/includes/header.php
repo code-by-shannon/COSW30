@@ -10,7 +10,7 @@ $user_menu = match($_SESSION['role'] ?? '') {
 
 <?php
 if (isset($_SESSION['first_name'])) {
-    echo '<p class="current_user">Logged in as: ' .
+    echo '<p class="current_user">You are currently logged in as: ' .
          $_SESSION['first_name'] .
          ' (' .
          $_SESSION['role'] .

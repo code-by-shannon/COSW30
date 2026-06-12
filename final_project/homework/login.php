@@ -1,6 +1,4 @@
-<?php # Script 12.12 - login.php #4
-// This page processes the login form submission.
-// The script now stores the HTTP_USER_AGENT value for added security.
+<?php
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -11,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// Need two helper files:
 	require('includes/login_functions.inc.php');
 	require('../mysqli_connect.php');
+	
 
 	// Check the login:
 	list ($check, $data) = check_login($dbc, $_POST['email'], $_POST['pass']);

@@ -4,8 +4,8 @@ require('includes/header.php');
 
 echo '<div class="main-content">';
 
-echo '<h1>Role-Based Access System</h1>';
-echo '<h2>Admin • Employee • Customer Portals</h2>';
+echo '<h1>Role Based Access System</h1>';
+echo '<h2>Admin, Employee & Customer Access</h2>';
 echo '<ul>
         <li><b>Admin:</b><br> 
         username: max@f1.com<br>

@@ -1,7 +1,10 @@
 <?php
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 require('../mysqli_connect.php');
-require ('includes/header.php'); 
+
 
 $user_id = $_GET['user_id'];
 
@@ -33,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 }
 
-
+require ('includes/header.php'); 
 ?>
 
 <div class='form-container'>

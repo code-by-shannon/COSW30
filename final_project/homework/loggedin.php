@@ -1,7 +1,5 @@
-<?php # Script 12.13 - loggedin.php #3
-// The user is redirected here from login.php.
-
-session_start(); // Start the session.
+<?php 
+session_start();
 
 // If no session value is present, redirect the user:
 // Also validate the HTTP_USER_AGENT!
